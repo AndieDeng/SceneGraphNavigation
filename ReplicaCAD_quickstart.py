@@ -357,6 +357,7 @@ start_time = sim.get_world_time()
 count = 1
 while sim.get_world_time() < start_time + 4.0:
     sim.agents[0].scene_node.rotate(mn.Rad(mn.math.pi_half / 60.0), mn.Vector3(0, 1, 0))
+    sim.agents[0].scene_node.translation += np.array([0.3, 0, 0])
     sim.step_physics(1.0 / 60.0)
     if make_video:
         observation = sim.get_sensor_observations()

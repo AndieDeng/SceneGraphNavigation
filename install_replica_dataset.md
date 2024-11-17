@@ -59,9 +59,17 @@ habitat-viewer --enable-physics --dataset data/replica_cad/replicaCAD.scene_data
 python examples/example.py --scene data/scene_datasets/habitat-test-scenes/skokloster-castle.glb
 ```
 
-## motion-viewer
-copy fairmotion folder from https://github.com/facebookresearch/fairmotion.git. This repo cannot be installed directly due to python conflict, but can use some python functions.
+
+
+## navigation basic
 ```
-sudo apt install nvidia-cuda-toolkit
-pip install torch==1.7.1 torchvision==0.8.2
+pip install jupyter
 ```
+
+## Get RGB, Depth, and Semantic Images from Habitat in ReplicaCAD environment
+```
+conda activate habitat
+cd habitat-sim
+python examples/tutorials/nb_python/ReplicaCAD_quickstart.py
+```
+to get rgb, depth, semantic images in the /output folder
